@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Page</title>
+  <!-- Link to Tailwind CSS CDN for styling -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Glow effect for menu items */
+    .header-menu a {
+      transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .header-menu a:hover {
+      color: #f8f260; /* Glow effect color */
+      text-shadow: 0 0 10px #f8f260; /* Glow effect */
+    }
+
+    /* Custom logo size */
+    .logo-img {
+      width: 100px; /* Default size */
+      height: auto;
+    }
+
+    /* Increase logo size on larger screens */
+    @media (min-width: 768px) {
+      .logo-img {
+        width: 120px; /* Increased size for medium screens and up */
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .logo-img {
+        width: 130px; /* Increased size for large screens and up */
+      }
+    }
+
+    /* Custom header background color */
+    .custom-header-bg {
+      background-color: #111826; /* Custom header background color */
+    }
+
+    /* Reduce header height */
+    .header {
+      padding-top: 0.5rem; /* Reduced padding-top */
+      padding-bottom: 0.5rem; /* Reduced padding-bottom */
+    }
+
+    .header-content {
+      margin-top: 0; /* Remove top margin to reduce space */
+    }
+
+    .header-menu a {
+      padding: 0.5rem 1rem; /* Adjust padding for menu items */
+    }
+
+    /* Show hamburger menu icon only on small screens */
+    .hamburger-menu {
+      display: none; /* Hidden by default */
+    }
+
+    /* Show hamburger menu icon and hide desktop menu on small screens */
+    @media (max-width: 767px) {
+      .header-menu-desktop {
+        display: none; /* Hide desktop menu */
+      }
+
+      .hamburger-menu {
+        display: block; /* Show hamburger menu */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="text-gray-600 body-font custom-header-bg header">
+    <div class="container mx-auto p-2"> <!-- Adjusted padding for lower height -->
+      <div class="flex flex-col md:flex-row items-center">
+        <!-- Logo and Title Section -->
+        <div class="flex flex-col items-center w-full">
+          <div class="flex items-center mb-2 md:mb-0">
+            <img src="C:\Program Files\Android\Bold Wings\Bold Wings (1).png" alt="Logo" class="logo-img rounded-full">
+            <span class="text-white text-lg font-semibold ml-4 hidden md:inline">Bold Wings</span>
+          </div>
+          <!-- Desktop Navigation Menu -->
+          <nav class="header-menu header-menu-desktop flex flex-wrap justify-center md:justify-between text-base w-full mt-2">
+            <a class="flex-1 text-center hover:text-gray-900 md:font-bold" href="#">Home</a>
+            <a class="flex-1 text-center hover:text-gray-900 md:font-bold" href="#">Team</a>
+            <a class="flex-1 text-center hover:text-gray-900 md:font-bold" href="#">Courses</a>
+            <a class="flex-1 text-center hover:text-gray-900 md:font-bold" href="#">Gallery</a>
+            <a class="flex-1 text-center hover:text-gray-900 md:font-bold" href="#">Placement</a>
+            <a class="flex-1 text-center hover:text-gray-900 md:font-bold" href="#">Career</a>
+            <a class="flex-1 text-center hover:text-gray-900 md:font-bold" href="#">Contact Us</a>
+          </nav>
+        </div>
+        <!-- Hamburger Menu Icon for small screens -->
+        <div class="hamburger-menu md:hidden flex items-center ml-auto">
+          <button id="hamburger-button" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobile-navbar" class="header-menu md:hidden flex flex-col items-center mt-2 hidden">
+      <a class="hover:text-gray-900" href="#">Home</a>
+      <a class="hover:text-gray-900" href="#">Team</a>
+      <a class="hover:text-gray-900" href="#">Courses</a>
+      <a class="hover:text-gray-900" href="#">Gallery</a>
+      <a class="hover:text-gray-900" href="#">Placement</a>
+      <a class="hover:text-gray-900" href="#">Career</a>
+      <a class="hover:text-gray-900" href="#">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- JavaScript for Hamburger Menu -->
+  <script>
+    document.getElementById('hamburger-button').addEventListener('click', function() {
+      const mobileNavbar = document.getElementById('mobile-navbar');
+      mobileNavbar.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
