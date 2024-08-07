@@ -7,6 +7,53 @@
   <title>Gallery Section</title>
   <!-- Link to Tailwind CSS CDN for styling -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 4px solid #ecc544; /* Add border color */
+      border-radius: 0.5rem; /* Optional: to match rounded corners of images */
+      padding: 0.5rem; /* Increase padding around images */
+      opacity: 0; /* Start as invisible */
+      animation: fadeIn 1s forwards; /* Apply fade-in animation */
+    }
+
+    .gallery-item:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .gallery-item:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .gallery-item:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    .gallery-item:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+    .gallery-item:nth-child(5) {
+      animation-delay: 1s;
+    }
+    .gallery-item:nth-child(6) {
+      animation-delay: 1.2s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 
 <body>
@@ -17,26 +64,26 @@
         <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
       </div>
       <div class="flex flex-wrap md:-m-2 -m-1">
-        <div class="flex flex-wrap w-1/2">
-          <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
+        <div class="flex flex-wrap w-full md:w-1/2">
+          <div class="md:p-3 p-2 w-1/2 gallery-item">
+            <img alt="gallery" class="w-full object-cover h-full object-center block rounded-lg" src="C:\Program Files\Android\Bold Wings\gallery\WhatsApp Image 2024-08-02 at 12.25.42 PM.jpeg">
           </div>
-          <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301">
+          <div class="md:p-3 p-2 w-1/2 gallery-item">
+            <img alt="gallery" class="w-full object-cover h-full object-center block rounded-lg" src="C:\Program Files\Android\Bold Wings\gallery\Yellow and Brown Traditional Illustrative Guru Purnima Instagram Post-2.png">
           </div>
-          <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
+          <div class="md:p-3 p-2 w-full gallery-item">
+            <img alt="gallery" class="w-full h-full object-cover object-center block rounded-lg" src="C:\Program Files\Android\Bold Wings\gallery\Yellow and Brown Traditional Illustrative Guru Purnima Instagram Post-3.png">
           </div>
         </div>
-        <div class="flex flex-wrap w-1/2">
-          <div class="md:p-2 p-1 w-full">
-            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
+        <div class="flex flex-wrap w-full md:w-1/2">
+          <div class="md:p-3 p-2 w-full gallery-item">
+            <img alt="gallery" class="w-full h-full object-cover object-center block rounded-lg" src="C:\Program Files\Android\Bold Wings\gallery\Yellow and Brown Traditional Illustrative Guru Purnima Instagram Post-4.png">
           </div>
-          <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
+          <div class="md:p-3 p-2 w-1/2 gallery-item">
+            <img alt="gallery" class="w-full object-cover h-full object-center block rounded-lg" src="C:\Program Files\Android\Bold Wings\gallery\Yellow and Brown Traditional Illustrative Guru Purnima Instagram Post-13.png">
           </div>
-          <div class="md:p-2 p-1 w-1/2">
-            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
+          <div class="md:p-3 p-2 w-1/2 gallery-item">
+            <img alt="gallery" class="w-full object-cover h-full object-center block rounded-lg" src="C:\Program Files\Android\Bold Wings\gallery\Yellow and Brown Traditional Illustrative Guru Purnima Instagram Post-13.png">
           </div>
         </div>
       </div>
@@ -45,4 +92,3 @@
 </body>
 
 </html>
- 
